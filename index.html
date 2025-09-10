@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Creative Designer</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #ff4d5a; /* modern pop of red-pink */
+      --dark: #111;
+      --light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(17, 17, 17, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--accent) !important;
+      letter-spacing: 1px;
+    }
+    .nav-link {
+      color: #fff !important;
+      transition: color 0.3s;
+    }
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    /* Hero */
+    header {
+      background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)),
+                  url('Portfolio\SGNTR JPEG Logo.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 120px 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    section h2 {
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: var(--accent);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Cards */
+    .portfolio-card,
+    .exp-card {
+      border: none;
+      border-radius: 15px;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .portfolio-card:hover,
+    .exp-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+    .portfolio-card img {
+      border-radius: 15px 15px 0 0;
+    }
+
+    /* Skills */
+    .skill-badge {
+      background: var(--dark);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      margin: 5px;
+      display: inline-block;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+    .skill-badge:hover {
+      background: var(--accent);
+    }
+
+    /* Contact */
+    form .form-control {
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      padding: 14px;
+      transition: all 0.3s;
+    }
+    form .form-control:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 0.2rem rgba(255,77,90,0.25);
+    }
+    form button {
+      background: var(--accent);
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      transition: transform 0.2s;
+    }
+    form button:hover {
+      transform: translateY(-2px);
+      background: #e63946;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #bbb;
+      padding: 30px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">SGNTR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header>
+    <div class="container">
+      <h1>I'm Nathan Sarki | Alias <span style="color:#e63946;">SGNTR</span></h1>
+      <p>Creative Designer | Apparel/Streetwear & Poster and Cover Art</p>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="text-center">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="lead mt-3">I’m a creative designer specializing in <strong>apparel/streetwear design</strong> and <strong>posters & cover art</strong>. I combine bold visuals and modern aesthetics to create designs that stand out and connect with audiences.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-light text-center">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="mt-4">
+        <span class="skill-badge">Streetwear Design</span>
+        <span class="skill-badge">Creative Posters</span>
+        <span class="skill-badge">Album Covers</span>
+        <span class="skill-badge">Adobe Photoshop</span>
+        <span class="skill-badge">Adobe Illustrator</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="text-center">Experience</h2>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6">
+          <div class="card exp-card p-4">
+            <h5>Head Designer, REMORSELESS Clothing Brand</h5>
+            <p class="text-muted">2024-2025</p>
+            <p>Worked with a local clothing brand owner to deliver individual pieces and collections for his urban clothing brand, Remorseless.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card exp-card p-4">
+            <h5>Head Designer, BLURR Clothing Brand</h5>
+            <p class="text-muted">2025 - Present</p>
+            <p>Worked with a local clothing brand owner to deliver single graphics and entire collections for caps and other apparel including t-shirts and jean shorts (jorts), for his urban clothing brand, Blurr.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card exp-card p-4">
+              <h5>Head Designer, The Sleepy Dough</h5>
+              <p class="text-muted">2025 - Present</p>
+              <p>Worked with a local cookie business owner to deliver an entire business branding package featuring brand's colour palette, brand's primary and secondary text, brand's primary, secondary, submark and logo mark logos, along with 3 distinct designs for a box packaging family.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card exp-card p-4">
+              <h5>Head Designer, RISEN Clothing Brand</h5>
+              <p class="text-muted">2025 - Present</p>
+              <p>Worked with a local Christian clothing brand owner to deliver a jersey for their Christian brand, Risen.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">My Work</h2>
+      <div class="row g-4 mt-4">
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="C:\Users\XLILYAYA\Desktop\Nexus - HTML.CSS\Portfolio\I AM Mockup_Styling1.jpg" class="card-img-top" alt="Streetwear Design">
+            <div class="card-body">
+              <h5 class="card-title">Streetwear Collection</h5>
+              <p class="card-text">Urban-inspired apparel designed for individuality and bold expression.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="C:\Users\XLILYAYA\Desktop\Nexus - HTML.CSS\Portfolio\Masked.jpg" class="card-img-top" alt="Poster Design">
+            <div class="card-body">
+              <h5 class="card-title">Creative Posters</h5>
+              <p class="card-text">High-impact poster art that grabs attention and tells a story.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card portfolio-card">
+            <img src="C:\Users\XLILYAYA\Desktop\Nexus - HTML.CSS\Portfolio\DC3.jpg" class="card-img-top" alt="Cover Art">
+            <div class="card-body">
+              <h5 class="card-title">Album Cover Art</h5>
+              <p class="card-text">Unique, aesthetic cover art tailored to music and branding.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="text-center">Contact Me</h2>
+      <p class="lead text-center mt-3">Let’s collaborate on your next project.</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Write your message..." required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark btn-lg">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nathan Sarki | Creative Designer</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
